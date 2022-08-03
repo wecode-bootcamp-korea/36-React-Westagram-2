@@ -1,0 +1,57 @@
+@import '../../../../styles/variables.scss';
+
+.comment {
+  @include flex(space-between, null);
+  margin: 0 10px;
+}
+
+.commentName {
+  margin-right: 10px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.commentHead {
+  font-size: 12px;
+  span {
+    max-width: 340px;
+  }
+}
+.commentNickname {
+  margin-right: 10px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.commentsIcon {
+  img {
+    width: 15px;
+    height: 15px;
+    margin: 0px 5px;
+  }
+}
+
+.commentContent {
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+}
+
+.commentUpload {
+  display: flex;
+  padding: 5px 15px;
+  border-top: 1px solid #bdbdbd;
+  input {
+    padding: 5px;
+    border: none;
+    outline: none;
+    width: 100%;
+  }
+  button {
+    width: 50px;
+    color: blue;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+  }
+}

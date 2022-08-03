@@ -1,0 +1,81 @@
+@import '../../../../styles/variables.scss';
+
+.feedHeader {
+  @include flex(space-between, center);
+  height: 50px;
+  padding: 0 15px;
+}
+
+.feedsBody {
+  width: 100%;
+  height: 400px;
+}
+
+.userNickname {
+  @include flex(null, center);
+  img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 50%;
+  }
+  p {
+    font-size: 13px;
+  }
+}
+
+.feedIcons {
+  @include flex(space-between, center);
+  height: 45px;
+  padding: 0 15px;
+  img {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+  }
+}
+
+.feeds {
+  width: 420px;
+  background-color: white;
+  border: 1px solid #bdbdbd;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.feedInfo {
+  @include flex(null, center);
+  padding: 0 15px;
+  font-size: 12px;
+}
+
+.feedLike {
+  @include flex(null, center);
+  padding: 5px;
+  margin: 10px;
+  img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  span {
+    font-weight: bold;
+  }
+  p {
+    font-size: 13px;
+  }
+}
+
+.createdAt {
+  color: #bdbdbd;
+  font-weight: bold;
+  font-size: 15px;
+  margin: 0 15px 10px;
+}
+
+.feedName {
+  margin-right: 8px;
+  font-size: 15px;
+  font-weight: bold;
+}
