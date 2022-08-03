@@ -1,0 +1,69 @@
+@import '../../../styles/variables.scss';
+
+.aside {
+  width: 250px;
+  height: 600px;
+
+  .asideNav {
+    @include flex(center, center);
+    height: 3rem;
+    font-size: 0.75rem;
+  }
+
+  .asideNav img {
+    object-fit: contain;
+    width: 2.2rem;
+    height: 2.2rem;
+    border: 1px solid white;
+    border-radius: 100%;
+    margin-right: 0.5rem;
+  }
+
+  .userDescription {
+    opacity: 0.5;
+  }
+
+  .asideUserInfo {
+    width: 80%;
+  }
+
+  .asideBox {
+    display: flex;
+    flex-direction: column;
+    height: 170px;
+    margin-bottom: 1rem;
+    padding: 0 0.75rem;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 0.75rem;
+  }
+
+  .storyBox {
+    height: 200px;
+  }
+
+  .storyBoxes {
+    overflow: scroll;
+  }
+
+  .storyNav {
+    @include flex(space-between, center);
+    width: 100%;
+    height: 1.5rem;
+    padding: 0.5rem 0;
+  }
+
+  .storyNavLeft p {
+    opacity: 0.6;
+  }
+
+  .storyNavRight p {
+    font-weight: bold;
+  }
+
+  .followButton {
+    color: #51a4f1;
+    font-weight: bold;
+    width: 3rem;
+  }
+}

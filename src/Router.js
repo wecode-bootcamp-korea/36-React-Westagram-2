@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 
 import LoginYoungjun from './pages/youngjun/Login/Login';
 import MainYoungjun from './pages/youngjun/Main/Main';

@@ -1,0 +1,46 @@
+@import '../../../styles/variables.scss';
+
+.mainNav {
+  @include flex(space-between, center);
+  height: 4rem;
+  background-color: white;
+  padding: 0.1rem 2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+  .navLogo {
+    font-family: 'Lobster', cursive;
+    font-size: 2rem;
+
+    img {
+      width: 1.5rem;
+    }
+  }
+
+  .navInput {
+    position: relative;
+    @include flex(center, center);
+    font-size: 0.9rem;
+
+    input {
+      width: 18rem;
+      height: 2rem;
+      background-color: $backgroundColor;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    span {
+      @include flex(center, center);
+      position: absolute;
+      color: rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .navIcons {
+    display: flex;
+    justify-content: space-around;
+    width: 10rem;
+  }
+
+  .navIcons img {
+    width: 1.5rem;
+  }
+}

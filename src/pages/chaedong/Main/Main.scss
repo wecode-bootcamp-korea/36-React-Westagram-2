@@ -1,1 +1,23 @@
 @import '../../../styles/variables.scss';
+
+.main {
+  margin: 5px 0px;
+
+  .likeBtn:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+
+  main {
+    padding-top: 3rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  section {
+    width: 500px;
+    min-height: 700px;
+    margin-right: 20px;
+    border-radius: 1%;
+  }
+}

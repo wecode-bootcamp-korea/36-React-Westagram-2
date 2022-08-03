@@ -1,1 +1,66 @@
 @import '../../../styles/variables.scss';
+
+.login {
+  .loginContainer {
+    @include flex(space-around, center);
+    flex-direction: column;
+    width: 28rem;
+    height: 33rem;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: white;
+    border: 2px solid rgb(230, 230, 230);
+
+    .loginTitle {
+      font-family: 'Lobster', cursive;
+      font-size: 3.5rem;
+    }
+
+    .loginForm {
+      @include flex(center, center);
+      flex-direction: column;
+
+      input {
+        width: 20rem;
+        height: 3rem;
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+        background-color: #fafafa;
+        border: 1px solid rgba(128, 128, 128, 0.2);
+        border-radius: 0.25rem;
+        font-weight: 500;
+      }
+
+      button {
+        width: 20rem;
+        height: 2.5rem;
+        margin-top: 1rem;
+
+        color: white;
+        border: none;
+        border-radius: 0.5rem;
+
+        font-size: 1rem;
+        font-weight: bold;
+      }
+
+      .disabledButton {
+        background-color: #c4e1fb;
+      }
+
+      .enabledButton {
+        background-color: #0095f6;
+      }
+    }
+  }
+
+  .findPassword a {
+    color: navy;
+    text-decoration: none;
+    font-weight: bold;
+  }
+}
