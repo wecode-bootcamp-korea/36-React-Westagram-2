@@ -4,7 +4,6 @@ import { useState } from 'react';
 
 function Login() {
   const navigate = useNavigate();
-
   const goToMain = () => navigate('/main-chaedong');
   const [userId, setUserId] = useState('');
   const [userPassword, setUserPassword] = useState('');

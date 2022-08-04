@@ -34,7 +34,6 @@
       @include flex(null, center);
       width: 310px;
       margin: 20px 0;
-      // height: 100px;
       padding: 10px;
       border-radius: 4px;
       background-color: $backgroundColor;
@@ -45,9 +44,6 @@
         img {
           padding: 1px;
           border: 3px solid #f806cc;
-          // border: 3px solid transparent;
-          // background-image: linear-gradient(#fff, #fff),
-          //   linear-gradient(to right, red 0%, orange 100%);
         }
       }
 
