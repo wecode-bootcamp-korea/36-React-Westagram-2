@@ -10,12 +10,9 @@ import MainChaedong from './pages/chaedong/Main/Main';
 import LoginSeulki from './pages/seulki/Login/Login';
 import MainSeulki from './pages/seulki/Main/Main';
 
-import Nav from './components/Nav/Nav';
-
 const Router = () => {
   return (
     <BrowserRouter>
-      <Nav />
       <Routes>
         <Route path="/login-youngjun" element={<LoginYoungjun />} />
         <Route path="/main-youngjun" element={<MainYoungjun />} />
