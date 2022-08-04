@@ -19,17 +19,35 @@ const Router = () => {
       <Routes>
         <Route path="/" element={<Entry />} />
         <Route path="/login-youngjun" element={<LoginYoungjun />} />
-        <Route element={<Nav />}>
-          <Route path="/main-youngjun" element={<MainYoungjun />} />
-        </Route>
+        <Route
+          path="/main-youngjun"
+          element={
+            <>
+              <Nav />
+              <MainYoungjun />
+            </>
+          }
+        />
         <Route path="/login-chaedong" element={<LoginChaedong />} />
-        <Route path="/main-chaedong" element={<Nav />}>
-          <Route element={<MainChaedong />} />
-        </Route>
+        <Route
+          path="/main-chaedong"
+          element={
+            <>
+              <Nav />
+              <MainChaedong />
+            </>
+          }
+        />
         <Route path="/login-seulki" element={<LoginSeulki />} />
-        <Route path="/main-seulki" element={<Nav />}>
-          <Route element={<MainSeulki />} />
-        </Route>
+        <Route
+          path="/main-seulki"
+          element={
+            <>
+              <Nav />
+              <MainSeulki />
+            </>
+          }
+        />
       </Routes>
     </BrowserRouter>
   );

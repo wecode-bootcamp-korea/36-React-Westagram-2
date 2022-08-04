@@ -3,9 +3,7 @@ import './Nav.scss';
 
 function Nav() {
   const [hasValue, setHasValue] = useState(false);
-  const handleInputSearch = e => {
-    setHasValue(!e.target.value);
-  };
+  const handleInputChange = e => setHasValue(e.target.value);
 
   return (
     <nav className="mainNav">
@@ -13,12 +11,12 @@ function Nav() {
         <img src="/images/instagram-logo.png" alt="westagramLogo" /> | westagram
       </h3>
       <div className="navInput">
-        {hasValue ? (
+        {hasValue ? null : (
           <span className="searchGlass">
             <img src="/images/magnifier.png" alt="magnifier" />
           </span>
-        ) : null}
-        <input onChange={handleInputSearch} type="text" placeholder="검색" />
+        )}
+        <input onChange={handleInputChange} type="text" placeholder="검색" />
       </div>
       <div className="navIcons">
         <img

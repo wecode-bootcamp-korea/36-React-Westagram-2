@@ -3,7 +3,7 @@ import Comment from './Comment';
 import './Article.scss';
 
 function Article() {
-  const [userId, setUserId] = useState('chaedong');
+  const [userId] = useState('chaedong');
   const [commentsList, setCommentsList] = useState([]);
   const [commentContent, setCommentContent] = useState('');
   const inputComment = e => setCommentContent(e.target.value);
