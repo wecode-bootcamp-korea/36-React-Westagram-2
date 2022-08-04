@@ -1,5 +1,19 @@
 @import '../../../styles/variables.scss';
 
+body {
+  background-color: $backgroundColor;
+}
+
+.icon::before {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 .main {
   margin: 5px 0px;
 

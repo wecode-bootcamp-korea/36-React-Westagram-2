@@ -4,7 +4,8 @@ function Nav() {
   return (
     <nav className="mainNav">
       <h3 className="navLogo">
-        <img src="/images/instagram-oogo.png" alt="westagramLogo" /> | westagram
+        <img src="/images/chaedong/instagram-oogo.png" alt="westagramLogo" /> |
+        westagram
       </h3>
       <div className="navInput">
         <span>

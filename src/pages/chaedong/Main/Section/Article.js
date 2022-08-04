@@ -17,10 +17,13 @@ function Article() {
   };
 
   return (
-    <article>
+    <article className="article">
       <div className="articleNav">
         <div className="articleNavUserInfo userId">
-          <img src="/images/profile-wecode-desk.jpg" alt="userProfileImg" />
+          <img
+            src="/images/chaedong/profile-wecode-desk.jpg"
+            alt="userProfileImg"
+          />
           <span>chaedong</span>
         </div>
         <div className="articleNavSeeMore">
@@ -28,7 +31,7 @@ function Article() {
         </div>
       </div>
       <div className="articleImg">
-        <img src="/images/article-sanpransisco.jpg" alt="articleImg" />
+        <img src="/images/chaedong/article-sanpransisco.jpg" alt="articleImg" />
       </div>
       <div className="articleImojis">
         <div>
