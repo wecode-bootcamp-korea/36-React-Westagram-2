@@ -9,7 +9,7 @@ const Main = () => {
   const navigate = useNavigate();
 
   const loginRouter = () => {
-    navigate('/');
+    navigate('/login-youngjun');
   };
 
   const image = FileName => {
