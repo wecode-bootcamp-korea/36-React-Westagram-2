@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import './Comment.scss';
 
-const Comment = ({ comment }) => {
+const Comment = ({ comment, i }) => {
   const image = FileName => {
     return process.env.PUBLIC_URL + '/images/youngjun/' + FileName + '.png';
   };
@@ -16,7 +16,7 @@ const Comment = ({ comment }) => {
   };
 
   return (
-    <div className="comment">
+    <div className="comment" key={i}>
       <div className="commentHead">
         <span className="commentNickname"> 닉네임 </span>
         <span>{comment}</span>
