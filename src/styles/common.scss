@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Source+Sans+Pro:wght@300;400&display=swap');
+@import './variables.scss';
 
 * {
   box-sizing: border-box;
+}
+
+body {
+  background-color: $backgroundColor;
 }
