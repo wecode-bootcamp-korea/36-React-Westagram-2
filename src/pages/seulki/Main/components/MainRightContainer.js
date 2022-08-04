@@ -1,0 +1,156 @@
+import React from "react";
+
+const MainRightContainer = () => {
+  return (
+    <div className="main_right_container">
+      <div className="side_feed_top">
+        <img
+          className="userProfilePic"
+          alt="surfing_profile_pic"
+          src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c3VyZmluZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+        />
+        <div className="background_grey">
+          <div className="background_grey">
+            <button className="userId_bio">
+              <strong className="background_grey">surfing_bootcamp</strong>
+            </button>
+          </div>
+          <span className="userId_bio color_grey">
+            Surfing world | 서핑월드
+          </span>
+        </div>
+      </div>
+      <div className="story_wrapper">
+        <div className="story_top">
+          <span className="story_font color_grey">스토리</span>
+          <button className="seeAll_right_button">모두보기</button>
+        </div>
+        <div className="story_overflow">
+          <div className="friendsInfo_wrapper">
+            <img
+              className="gotStory_profile_pic feed_profile_pic"
+              alt="friends_profile_pic"
+              src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmFiYml0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
+            />
+            <div className="friendsStoryInfo">
+              <button className="friendsId">
+                <strong>kind.rabbit</strong>
+              </button>
+              <span className="lastUpdated color_grey">1분 전</span>
+            </div>
+          </div>
+          <div className="friendsInfo_wrapper">
+            <img
+              className="gotStory_profile_pic feed_profile_pic"
+              alt="friends_profile_pic"
+              src="https://images.unsplash.com/photo-1553264701-d138db4fd5d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8JTA4YW5ncnklMjBiaXJkfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
+            />
+            <div className="friendsStoryInfo">
+              <button className="friendsId">
+                <strong>angry_bird</strong>
+              </button>
+              <span className="lastUpdated color_grey">5분 전</span>
+            </div>
+          </div>
+          <div className="friendsInfo_wrapper">
+            <img
+              className="gotStory_profile_pic feed_profile_pic"
+              alt="friends_profile_pic"
+              src="https://images.unsplash.com/photo-1585468274952-66591eb14165?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bGlvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+            />
+            <div className="friendsStoryInfo">
+              <button className="friendsId">
+                <strong>mylion</strong>
+              </button>
+              <span className="lastUpdated color_grey">30분 전</span>
+            </div>
+          </div>
+          <div className="friendsInfo_wrapper">
+            <img
+              className="gotStory_profile_pic feed_profile_pic"
+              alt="friends_profile_pic"
+              src="https://images.unsplash.com/photo-1612639797482-0ca1f21bdeb2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2VhJTIwbGlvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+            />
+            <div className="friendsStoryInfo">
+              <button className="friendsId">
+                <strong>swimmmer</strong>
+              </button>
+              <span className="lastUpdated color_grey">1시간 전</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="recommendation_wrapper">
+        <div className="recommendation_top">
+          <span className="recommendation_font color_grey">
+            회원님을 위한 추천
+          </span>
+          <button className="seeAll_right_button">모두보기</button>
+        </div>
+        <div className="recommendation_frame">
+          <div className="friendsInfo_wrapper">
+            <img
+              className="feed_profile_pic"
+              alt="friends_profile_pic"
+              src="https://images.unsplash.com/photo-1575699914911-0027c7b95fb6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8a2FuZ2Fyb298ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
+            />
+            <div className="friendsStoryInfo">
+              <button className="friendsId">
+                <strong>kangaroooo</strong>
+              </button>
+              <span className="lastUpdated color_grey">
+                swimmer님 외 3명이 kangaroooo님과 친구입니다.
+              </span>
+            </div>
+          </div>
+          <button className="follow_button">팔로우</button>
+        </div>
+        <div className="recommendation_frame">
+          <div className="friendsInfo_wrapper">
+            <img
+              className="feed_profile_pic"
+              alt="friends_profile_pic"
+              src="https://images.unsplash.com/photo-1485735662814-c4f66e49dbae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8JTA4Z2lyYWZmZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+            />
+            <div className="friendsStoryInfo">
+              <button className="friendsId">
+                <strong>giraffeee</strong>
+              </button>
+              <span className="lastUpdated color_grey">
+                angry_bird님 외 1명이 giraffeee님과 친구입니다.
+              </span>
+            </div>
+          </div>
+          <button className="follow_button">팔로우</button>
+        </div>
+        <div className="recommendation_frame">
+          <div className="friendsInfo_wrapper">
+            <img
+              className="feed_profile_pic"
+              alt="friends_profile_pic"
+              src="https://images.unsplash.com/photo-1499842340257-55ccb7a02645?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aGlwcG98ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
+            />
+            <div className="friendsStoryInfo">
+              <button className="friendsId">
+                <strong>hippoisdabest</strong>
+              </button>
+              <span className="lastUpdated color_grey">
+                mylion님 외 17명이 hippoisdabest님과 친구입니다.
+              </span>
+            </div>
+          </div>
+          <button className="follow_button">팔로우</button>
+        </div>
+      </div>
+      <div className="copywriter_wrapper">
+        <p className="copywriter color_grey">
+          Westagram 정보·지원·홍보 센터·API·채용
+          정보·개인정보처리방침·약관·디렉터리·프로필·해시태그·언어
+        </p>
+        <p className="copywriter color_grey">© 2022 WESTAGRAM</p>
+      </div>
+    </div>
+  );
+};
+
+export default MainRightContainer;
