@@ -1,0 +1,76 @@
+@import '../styles/variables.scss';
+
+.Entry {
+  position: absolute;
+  @include flex(space-around, center);
+  flex-direction: column;
+  width: 500px;
+  padding: 25px 110px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  background-color: white;
+
+  .Head {
+    font-family: 'lobster';
+    text-align: center;
+    font-size: 50px;
+
+    h3 {
+      font-family: monospace;
+      margin-top: 20px;
+      font-size: 25px;
+      color: #0095f6;
+    }
+  }
+
+  .infoContainer {
+    @include flex(null, center);
+    flex-direction: column;
+
+    .info {
+      @include flex(null, center);
+      width: 310px;
+      margin: 20px 0;
+      // height: 100px;
+      padding: 10px;
+      border-radius: 4px;
+      background-color: $backgroundColor;
+      border: 1px solid lightgrey;
+      cursor: pointer;
+
+      &:hover {
+        img {
+          padding: 1px;
+          border: 3px solid #f806cc;
+          // border: 3px solid transparent;
+          // background-image: linear-gradient(#fff, #fff),
+          //   linear-gradient(to right, red 0%, orange 100%);
+        }
+      }
+
+      img {
+        width: 60px;
+        height: 60px;
+        margin-left: 10px;
+        margin-right: 20px;
+        border-radius: 50%;
+      }
+
+      p {
+        margin: 8px 0;
+      }
+
+      .name {
+        font-weight: 400;
+      }
+
+      .introduce {
+        font-size: 16px;
+        opacity: 0.7;
+      }
+    }
+  }
+}
