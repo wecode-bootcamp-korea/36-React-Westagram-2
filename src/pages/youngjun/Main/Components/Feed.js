@@ -3,7 +3,7 @@ import Comment from './Comment';
 
 import './Feed.scss';
 
-const Feed = props => {
+const Feed = ({ picture }) => {
   const image = FileName => {
     return process.env.PUBLIC_URL + '/images/youngjun/' + FileName + '.png';
   };
@@ -42,7 +42,7 @@ const Feed = props => {
       </header>
 
       <div className="feedPicture">
-        <img className="feedsBody" src={props.picture} alt="feedImg" />
+        <img className="feedsBody" src={picture} alt="feedImg" />
       </div>
 
       <div className="feedBody">

@@ -202,7 +202,7 @@
 }
 
 .userBox {
-  @include flex(space-between, null);
+  @include flex(space-between, center);
   margin: 0 10px;
   padding: 5px;
   img {
@@ -245,5 +245,6 @@
 
 .follow {
   color: blue;
+  font-size: 12px;
   cursor: pointer;
 }
