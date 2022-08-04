@@ -42,21 +42,21 @@
 .line2 {
   height: 1px;
   width: 100%;
-  background-color: #bdbdbd;
+  background-color: $backgroundColor;
 }
 
 .searchBar {
   @include flex(center, center);
   width: 300px;
   padding: 5px;
-  background-color: #bdbdbd;
+  background-color: $backgroundColor;
   border-radius: 20px;
   input {
     border: none;
     outline: none;
     width: 250px;
     padding: 5px;
-    background-color: #bdbdbd;
+    background-color: $backgroundColor;
   }
   img {
     width: 15px;
@@ -153,7 +153,7 @@
   display: flex;
   justify-content: center;
   margin-top: 60px;
-  background-color: #fafafa;
+  background-color: $backgroundColor;
 }
 
 /* side */

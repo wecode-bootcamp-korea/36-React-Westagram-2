@@ -4,15 +4,15 @@ import './Comment.scss';
 
 const Comment = props => {
   const image = FileName => {
-    return process.env.PUBLIC_URL + '/images/youngjun/' + FileName;
+    return process.env.PUBLIC_URL + '/images/youngjun/' + FileName + '.png';
   };
 
-  const [heart, setHeartImg] = useState(image('heart.png'));
+  const [heart, setHeartImg] = useState(image('heart'));
 
   const changeHeart = () => {
-    heart === image('heart.png')
-      ? setHeartImg(image('heart_1.png'))
-      : setHeartImg(image('heart.png'));
+    heart === image('heart')
+      ? setHeartImg(image('heart_1'))
+      : setHeartImg(image('heart'));
   };
 
   return (
@@ -28,11 +28,7 @@ const Comment = props => {
           alt="heartImg"
           onClick={changeHeart}
         />
-        <img
-          className="deleteImg"
-          src={image('deleteImg.png')}
-          alt="deleteImg"
-        />
+        <img className="deleteImg" src={image('deleteImg')} alt="deleteImg" />
       </div>
     </div>
   );
