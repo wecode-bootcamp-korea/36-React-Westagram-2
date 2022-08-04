@@ -1,16 +1,24 @@
+import { useState } from 'react';
 import './Nav.scss';
 
 function Nav() {
+  const [hasValue, setHasValue] = useState(false);
+  const handleInputSearch = e => {
+    setHasValue(!e.target.value);
+  };
+
   return (
     <nav className="mainNav">
       <h3 className="navLogo">
         <img src="/images/instagram-logo.png" alt="westagramLogo" /> | westagram
       </h3>
       <div className="navInput">
-        <span>
-          <i className="fas fa-search" /> &nbsp;&nbsp;검색
-        </span>
-        <input type="text" />
+        {hasValue ? (
+          <span className="searchGlass">
+            <img src="/images/magnifier.png" alt="magnifier" />
+          </span>
+        ) : null}
+        <input onChange={handleInputSearch} type="text" placeholder="검색" />
       </div>
       <div className="navIcons">
         <img
