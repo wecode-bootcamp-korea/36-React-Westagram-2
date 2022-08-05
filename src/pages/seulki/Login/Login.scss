@@ -92,7 +92,20 @@
       margin-top: 16px;
       border-radius: 5px;
       border: none;
-      background-color: #c4e1fb;
+      background-color: #0095f6;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .login_btn_disabled {
+      width: 278px;
+      height: 30px;
+      margin-top: 16px;
+      border-radius: 5px;
+      border: none;
+      background-color: #c4e1fb; //#0095f6
       color: white;
       font-weight: bold;
       cursor: pointer;

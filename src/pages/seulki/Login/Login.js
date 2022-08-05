@@ -14,9 +14,13 @@ function Login() {
     setPw(e.target.value);
   };
 
+  const buttonStatus = (id, pw) => {
+    return id.includes('@') && pw.length >= 5;
+  };
+
   const navigate = useNavigate();
   const goToMain = () => {
-    navigate('/main');
+    navigate('/main-seulki');
   };
 
   return (
@@ -35,10 +39,16 @@ function Login() {
             className="pw id_pw_input_box"
             type="password"
             placeholder=" 비밀번호"
-            value={pw}
-            onChnage={saveUserPw}
+            valuse={pw}
+            onChange={saveUserPw}
           />
-          <button className="login_btn" onClick={goToMain} disabled>
+          <button
+            className={
+              buttonStatus(id, pw) ? 'login_btn' : 'login_btn_disabled'
+            }
+            onClick={goToMain}
+            disabled={buttonStatus(id, pw) ? false : true}
+          >
             로그인
           </button>
           <a
