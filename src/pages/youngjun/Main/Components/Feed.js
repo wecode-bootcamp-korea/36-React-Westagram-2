@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
+import { image } from '../func';
 import Comment from './Comment';
 
 import './Feed.scss';
 
 const Feed = ({ picture }) => {
-  const image = FileName => {
-    return process.env.PUBLIC_URL + '/images/youngjun/' + FileName + '.png';
-  };
-
   const [heart, setHeartImg] = useState(image('heart'));
   const [commentList, setcommentList] = useState([]);
   const [commentValue, setCommentValue] = useState('');

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import { image } from './func';
 import Feed from './Components/Feed';
 
 import './Main.scss';
@@ -10,10 +10,6 @@ const Main = () => {
 
   const loginRouter = () => {
     navigate('/login-youngjun');
-  };
-
-  const image = FileName => {
-    return process.env.PUBLIC_URL + '/images/youngjun/' + FileName + '.png';
   };
 
   return (
