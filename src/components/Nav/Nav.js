@@ -11,7 +11,7 @@ function Nav() {
         <img src="/images/instagram-logo.png" alt="westagramLogo" /> | westagram
       </h3>
       <div className="navInput">
-        {hasValue ? null : (
+        {!hasValue && (
           <span className="searchGlass">
             <img src="/images/magnifier.png" alt="magnifier" />
           </span>
