@@ -39,7 +39,7 @@ const Feed = ({ picture }) => {
       </header>
 
       <div className="feedPicture">
-        <img className="feedsBody" src={picture} alt="feedImg" />
+        <img className="pictures" src={picture} alt="feedImg" />
       </div>
 
       <div className="feedBody">
@@ -83,16 +83,13 @@ const Feed = ({ picture }) => {
 
       <form className="commentUpload">
         <input
-          className="commentInput"
           type="text"
           placeholder="댓글달기"
           onChange={commentEvent}
           value={commentValue}
         />
 
-        <button className="submitCommentBtn" onClick={onSubmit}>
-          게시
-        </button>
+        <button onClick={onSubmit}>게시</button>
       </form>
     </article>
   );

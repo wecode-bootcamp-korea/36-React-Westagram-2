@@ -19,13 +19,8 @@ const Comment = ({ comment, i }) => {
         <span>{comment}</span>
       </div>
       <div className="commentsIcon">
-        <img
-          className="heartImg"
-          src={heart}
-          alt="heartImg"
-          onClick={changeHeart}
-        />
-        <img className="deleteImg" src={image('deleteImg')} alt="deleteImg" />
+        <img src={heart} alt="heartImg" onClick={changeHeart} />
+        <img src={image('deleteImg')} alt="deleteImg" />
       </div>
     </div>
   );
