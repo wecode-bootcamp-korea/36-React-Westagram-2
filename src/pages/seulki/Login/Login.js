@@ -51,6 +51,7 @@ function Login() {
           >
             로그인
           </button>
+
           <a
             className="forgotPw"
             href="https://www.instagram.com/accounts/password/reset/"

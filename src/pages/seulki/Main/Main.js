@@ -1,8 +1,8 @@
 import React from 'react';
 import './Main.scss';
-import Header from './components/Header';
-import MainLeftContainer from './components/MainLeftContainer';
-import MainRightContainer from './components/MainRightContainer';
+import Header from './components/Nav/Header';
+import MainLeftContainer from './components/Left/MainLeftContainer';
+import MainRightContainer from './components/Right/MainRightContainer';
 
 function Main() {
   return (
