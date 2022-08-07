@@ -1,4 +1,5 @@
-import React from "react";
+import React from 'react';
+import './MainRightContainer.scss';
 
 const MainRightContainer = () => {
   return (
@@ -12,7 +13,7 @@ const MainRightContainer = () => {
         <div className="background_grey">
           <div className="background_grey">
             <button className="userId_bio">
-              <strong className="background_grey">surfing_bootcamp</strong>
+              <span className="background_grey bold">surfing_bootcamp</span>
             </button>
           </div>
           <span className="userId_bio color_grey">
@@ -34,7 +35,7 @@ const MainRightContainer = () => {
             />
             <div className="friendsStoryInfo">
               <button className="friendsId">
-                <strong>kind.rabbit</strong>
+                <span className="bold">kind.rabbit</span>
               </button>
               <span className="lastUpdated color_grey">1분 전</span>
             </div>
@@ -47,7 +48,7 @@ const MainRightContainer = () => {
             />
             <div className="friendsStoryInfo">
               <button className="friendsId">
-                <strong>angry_bird</strong>
+                <span className="bold">angry_bird</span>
               </button>
               <span className="lastUpdated color_grey">5분 전</span>
             </div>
@@ -60,7 +61,7 @@ const MainRightContainer = () => {
             />
             <div className="friendsStoryInfo">
               <button className="friendsId">
-                <strong>mylion</strong>
+                <span className="bold">mylion</span>
               </button>
               <span className="lastUpdated color_grey">30분 전</span>
             </div>
@@ -73,7 +74,7 @@ const MainRightContainer = () => {
             />
             <div className="friendsStoryInfo">
               <button className="friendsId">
-                <strong>swimmmer</strong>
+                <span className="bold">swimmmer</span>
               </button>
               <span className="lastUpdated color_grey">1시간 전</span>
             </div>
@@ -96,7 +97,7 @@ const MainRightContainer = () => {
             />
             <div className="friendsStoryInfo">
               <button className="friendsId">
-                <strong>kangaroooo</strong>
+                <span className="bold">kangaroooo</span>
               </button>
               <span className="lastUpdated color_grey">
                 swimmer님 외 3명이 kangaroooo님과 친구입니다.
@@ -114,7 +115,7 @@ const MainRightContainer = () => {
             />
             <div className="friendsStoryInfo">
               <button className="friendsId">
-                <strong>giraffeee</strong>
+                <span className="bold">giraffeee</span>
               </button>
               <span className="lastUpdated color_grey">
                 angry_bird님 외 1명이 giraffeee님과 친구입니다.
@@ -132,7 +133,7 @@ const MainRightContainer = () => {
             />
             <div className="friendsStoryInfo">
               <button className="friendsId">
-                <strong>hippoisdabest</strong>
+                <span className="bold">hippoisdabest</span>
               </button>
               <span className="lastUpdated color_grey">
                 mylion님 외 17명이 hippoisdabest님과 친구입니다.
