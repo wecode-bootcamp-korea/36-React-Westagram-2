@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { image } from '../func';
+import { image, dummyData } from '../func';
 import Comment from './Comment';
 
 import './Feed.scss';
 
 const Feed = ({ picture }) => {
   const [heart, setHeartImg] = useState(image('heart'));
+
   const [commentList, setcommentList] = useState([]);
   const [commentValue, setCommentValue] = useState('');
 
@@ -20,8 +21,20 @@ const Feed = ({ picture }) => {
     if (commentValue === '') {
       return;
     }
-    setcommentList(commentValueList => [commentValue, ...commentValueList]);
+    const id = Math.random();
+    const userName = '닉네임';
+    const comment = commentValue;
+    setcommentList([...commentList, { userName, comment, id }]);
+
     setCommentValue('');
+  };
+
+  const deleteComment = id => {
+    setcommentList(
+      commentList.filter(comment => {
+        return comment.id !== id;
+      })
+    );
   };
 
   const commentEvent = e => {
@@ -70,12 +83,16 @@ const Feed = ({ picture }) => {
         </div>
 
         <div className="commentContent">
-          {commentList
-            .slice(0)
-            .reverse()
-            .map((comment, i) => {
-              return <Comment key={i} comment={comment} />;
-            })}
+          {commentList.map((comments, i) => {
+            return (
+              <Comment
+                key={i}
+                userName={comments.userName}
+                comment={comments.comment}
+                deleteComment={() => deleteComment(comments.id)}
+              />
+            );
+          })}
         </div>
 
         <p className="createdAt">2시간 전</p>
