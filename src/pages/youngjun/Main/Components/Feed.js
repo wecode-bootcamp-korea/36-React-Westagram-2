@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { image, dummyData } from '../func';
+import { image } from '../func';
 import Comment from './Comment';
 
 import './Feed.scss';
