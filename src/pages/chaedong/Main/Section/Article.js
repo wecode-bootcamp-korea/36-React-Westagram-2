@@ -2,8 +2,8 @@ import { useState } from 'react';
 import Comment from './Comment';
 import './Article.scss';
 
-function Article() {
-  const [userId] = useState('chaedong');
+function Article({ userId, profileImg, feedContents, feedImg }) {
+  const [loggedInUserId] = useState('chaedong');
   const [commentsList, setCommentsList] = useState([]);
   const [commentContent, setCommentContent] = useState('');
   const inputComment = e => setCommentContent(e.target.value);
@@ -20,18 +20,15 @@ function Article() {
     <article className="article">
       <div className="articleNav">
         <div className="articleNavUserInfo userId">
-          <img
-            src="/images/chaedong/profile-wecode-desk.jpg"
-            alt="userProfileImg"
-          />
-          <span>chaedong</span>
+          <img src={profileImg} alt="userProfileImg" />
+          <span>{userId}</span>
         </div>
         <div className="articleNavSeeMore">
           <i className="fa-solid fa-ellipsis" />
         </div>
       </div>
       <div className="articleImg">
-        <img src="/images/chaedong/article-sanpransisco.jpg" alt="articleImg" />
+        <img src={feedImg} alt="articleImg" />
       </div>
       <div className="articleImojis">
         <div>
@@ -43,13 +40,15 @@ function Article() {
           <i className="far fa-bookmark fa-lg" />
         </div>
       </div>
+      <div className="articleLiked">{feedContents}</div>
       <div className="articleLiked">
         <span className="userId">asdf</span>
         <span className="content"> 님 외 10명이 좋아합니다.</span>
       </div>
       <div className="articleComments">
         {commentsList.map(
-          (x, id) => (x = <Comment userId={userId} contents={x} key={id} />)
+          (x, id) =>
+            (x = <Comment userId={loggedInUserId} contents={x} key={id} />)
         )}
         <div className="articleCommentTime">
           <span>42분 전...</span>
