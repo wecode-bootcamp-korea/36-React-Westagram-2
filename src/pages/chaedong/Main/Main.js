@@ -2,10 +2,12 @@ import './Main.scss';
 
 import Article from './Section/Article';
 import Aside from './Aside';
+import Nav from '../../../components/Nav/Nav';
 
 function Main() {
   return (
     <div className="main">
+      <Nav />
       <main>
         <section>
           <Article />

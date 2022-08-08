@@ -5,17 +5,17 @@ import { useState } from 'react';
 function Login() {
   const navigate = useNavigate();
   const goToMain = () => navigate('/main-chaedong');
+
   const [userInfo, setUserInfo] = useState({ userId: '', userPassword: '' });
-  const isValidId = userId => userId.search(/@/g) !== -1;
-  const isValidPassword = userPassword => userPassword.length >= 5;
+  const handleInputInfo = e => {
+    const { name, value } = e.target;
+    setUserInfo({ ...userInfo, [name]: value });
+  };
+
   const isValidInputs = ({ userId, userPassword }) =>
     isValidId(userId) && isValidPassword(userPassword);
-  const handleInputId = e => {
-    setUserInfo({ ...userInfo, userId: e.target.value });
-  };
-  const handleInputPassWord = e => {
-    setUserInfo({ ...userInfo, userPassword: e.target.value });
-  };
+  const isValidId = userId => userId.search(/@/g) !== -1;
+  const isValidPassword = userPassword => userPassword.length >= 5;
 
   return (
     <div className="login">
@@ -27,13 +27,15 @@ function Login() {
           action="main.html"
         >
           <input
-            onChange={handleInputId}
+            name="userId"
+            onChange={handleInputInfo}
             className="inputId"
             type="email"
             placeholder="전화번호, 사용자 이름 또는 이메일"
           />
           <input
-            onChange={handleInputPassWord}
+            name="userPassword"
+            onChange={handleInputInfo}
             className="inputPassword"
             type="password"
             minLength="5"
