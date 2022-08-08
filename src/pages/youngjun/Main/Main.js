@@ -20,12 +20,6 @@ const Main = () => {
   return (
     <main className="main">
       <section className="centerFrame">
-        {/* <Feed picture={image('profile')} />
-        <Feed picture={image('profile')} />
-        <Feed picture={image('profile')} />
-        <Feed picture={image('profile')} />
-        <Feed picture={image('profile')} />
-        <Feed picture={image('profile')} /> */}
         {feeds.map((content, i) => {
           return (
             <Feed
