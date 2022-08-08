@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "userNickname": "Selp_0100 beHind",
+    "userName": "권영준",
+    "picture": "images/youngjun/heart.png"
+  },
+  {
+    "id": 2,
+    "userNickname": "Noa",
+    "userName": "가나다",
+    "picture": "images/youngjun/search.png"
+  },
+  {
+    "id": 3,
+    "userNickname": "kimcode",
+    "userName": "김코드",
+    "picture": "images/magnifier.png"
+  },
+  {
+    "id": 4,
+    "userNickname": "testNickName",
+    "userName": "testName",
+    "picture": "images/youngjun/vector.png"
+  },
+  {
+    "id": 5,
+    "userNickname": "testNickName2",
+    "userName": "testName2",
+    "picture": "images/youngjun/user.png"
+  },
+  {
+    "id": 6,
+    "userNickname": "testNickName3",
+    "userName": "testName3",
+    "picture": "images/youngjun/profile_2.png"
+  },
+  {
+    "id": 7,
+    "userNickname": "testNickName4",
+    "userName": "testName4",
+    "picture": "images/youngjun/deleteImg.png"
+  },
+  {
+    "id": 8,
+    "userNickname": "testNickName5",
+    "userName": "testName5",
+    "picture": "images/youngjun/chat.png"
+  },
+  {
+    "id": 9,
+    "userNickname": "testNickName6",
+    "userName": "testName6",
+    "picture": "images/youngjun/bookMark.png"
+  }
+]
