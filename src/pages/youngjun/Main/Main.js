@@ -1,6 +1,6 @@
 import React from 'react';
-import { image } from './func';
 import Feed from './Components/Feed';
+import { image } from './func';
 
 import './Main.scss';
 

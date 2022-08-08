@@ -8,7 +8,7 @@ const Comment = ({ comment, i, userName, deleteComment }) => {
 
   const changeHeart = () => {
     heart === image('heart')
-      ? setHeartImg(image('heart_1'))
+      ? setHeartImg(image('likeHeart'))
       : setHeartImg(image('heart'));
   };
 

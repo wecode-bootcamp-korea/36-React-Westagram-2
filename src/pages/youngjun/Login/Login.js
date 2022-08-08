@@ -7,11 +7,11 @@ const Login = () => {
   const [userId, setUserId] = useState('');
   const [userPassword, setUserPassword] = useState('');
   const [disabled, setDisabled] = useState(true);
-  const [button, setBtnStyle] = useState('loginBtn');
+  const [btnName, setBtnName] = useState('loginBtn');
 
   const navigate = useNavigate();
 
-  const mainPageRouter = () => {
+  const mainPageRouter = e => {
     navigate('/main-youngjun');
   };
 
@@ -23,17 +23,17 @@ const Login = () => {
     setUserPassword(e.target.value);
   };
 
-  const checkSpc = /[@]/;
+  const checkId = /[@]/;
 
   const loginVali = () => {
-    userPassword.length >= 5 && checkSpc.test(userId) && userId.length >= 1
+    userPassword.length >= 5 && checkId.test(userId) && userId.length >= 1
       ? stateConvert(false, 'loginBtnActive')
       : stateConvert(true, 'loginBtn');
   };
 
   const stateConvert = (boolean, className) => {
     setDisabled(boolean);
-    setBtnStyle(className);
+    setBtnName(className);
   };
 
   return (
@@ -57,7 +57,7 @@ const Login = () => {
           value={userPassword}
         />
         <button
-          className={button}
+          className={btnName}
           type="button"
           disabled={disabled}
           onClick={mainPageRouter}

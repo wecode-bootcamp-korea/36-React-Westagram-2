@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { image } from '../func';
 import Comment from './Comment';
+import { image } from '../func';
 
 import './Feed.scss';
 
@@ -12,7 +12,7 @@ const Feed = ({ picture }) => {
 
   const changeHeart = () => {
     heart === image('heart')
-      ? setHeartImg(image('heart_1'))
+      ? setHeartImg(image('likeHeart'))
       : setHeartImg(image('heart'));
   };
 
