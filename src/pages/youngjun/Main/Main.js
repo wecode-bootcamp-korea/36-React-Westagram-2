@@ -20,16 +20,7 @@ const Main = () => {
     <main className="main">
       <section className="centerFrame">
         {feeds.map((content, i) => {
-          return (
-            <Feed
-              key={i}
-              id={content.id}
-              userName={content.userName}
-              picture={content.picture}
-              feedComment={content.feedComment}
-              createdAt={content.createdAt}
-            />
-          );
+          return <Feed key={i} content={content} />;
         })}
       </section>
 

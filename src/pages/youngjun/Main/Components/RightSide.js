@@ -33,14 +33,7 @@ const RightSide = () => {
           <span> 모두보기 </span>
         </header>
         {user.map((user, i) => {
-          return (
-            <RightSideUserBox
-              key={i}
-              picture={user.picture}
-              userNickname={user.userNickname}
-              userName={user.userName}
-            />
-          );
+          return <RightSideUserBox key={i} user={user} />;
         })}
       </section>
 

@@ -4,7 +4,7 @@ import { image } from '../func';
 
 import './Feed.scss';
 
-const Feed = ({ picture, userName, feedComment, createdAt }) => {
+const Feed = ({ content: { picture, userName, feedComment, createdAt } }) => {
   const [heart, setHeartImg] = useState(image('heart'));
 
   const [commentList, setcommentList] = useState([]);
@@ -87,8 +87,7 @@ const Feed = ({ picture, userName, feedComment, createdAt }) => {
             return (
               <Comment
                 key={i}
-                userName={comments.userName}
-                comment={comments.comment}
+                comments={comments}
                 deleteComment={() => deleteComment(comments.id)}
               />
             );

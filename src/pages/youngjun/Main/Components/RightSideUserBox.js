@@ -1,6 +1,6 @@
 import React from 'react';
 
-const RightSideUserBox = ({ picture, userNickname, userName }) => {
+const RightSideUserBox = ({ user: { picture, userNickname, userName } }) => {
   return (
     <div className="userBox">
       <div className="user">

@@ -3,7 +3,7 @@ import { image } from '../func';
 
 import './Comment.scss';
 
-const Comment = ({ comment, i, userName, deleteComment }) => {
+const Comment = ({ comments: { comment, userName }, deleteComment }) => {
   const [heart, setHeartImg] = useState(image('heart'));
 
   const changeHeart = () => {
@@ -13,7 +13,7 @@ const Comment = ({ comment, i, userName, deleteComment }) => {
   };
 
   return (
-    <div className="comment" key={i}>
+    <div className="comment">
       <div className="commentHead">
         <span className="commentNickname"> {userName} </span>
         <span>{comment}</span>
