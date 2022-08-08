@@ -5,12 +5,17 @@ import { useState } from 'react';
 function Login() {
   const navigate = useNavigate();
   const goToMain = () => navigate('/main-chaedong');
-  const [userId, setUserId] = useState('');
-  const [userPassword, setUserPassword] = useState('');
+  const [userInfo, setUserInfo] = useState({ userId: '', userPassword: '' });
   const isValidId = userId => userId.search(/@/g) !== -1;
   const isValidPassword = userPassword => userPassword.length >= 5;
-  const isValidInputs = (userId, userPassword) =>
+  const isValidInputs = ({ userId, userPassword }) =>
     isValidId(userId) && isValidPassword(userPassword);
+  const handleInputId = e => {
+    setUserInfo({ ...userInfo, userId: e.target.value });
+  };
+  const handleInputPassWord = e => {
+    setUserInfo({ ...userInfo, userPassword: e.target.value });
+  };
 
   return (
     <div className="login">
@@ -22,13 +27,13 @@ function Login() {
           action="main.html"
         >
           <input
-            onChange={e => setUserId(e.target.value)}
+            onChange={handleInputId}
             className="inputId"
             type="email"
             placeholder="전화번호, 사용자 이름 또는 이메일"
           />
           <input
-            onChange={e => setUserPassword(e.target.value)}
+            onChange={handleInputPassWord}
             className="inputPassword"
             type="password"
             minLength="5"
@@ -36,21 +41,16 @@ function Login() {
           />
           <button
             className={
-              isValidInputs(userId, userPassword)
-                ? 'enabledButton'
-                : 'disabledButton'
+              isValidInputs(userInfo) ? 'enabledButton' : 'disabledButton'
             }
             type="submit"
-            disabled={isValidInputs(userId, userPassword) ? false : true}
+            disabled={isValidInputs(userInfo) ? false : true}
           >
             로그인
           </button>
         </form>
         <div className="findPassword">
-          <a href="#">비밀번호를 잊으셨나요?</a>
-          <div>
-            <Link to="/signup">Signup으로 이동</Link>
-          </div>
+          <Link to="/signup">비밀번호를 잊으셨나요?</Link>
         </div>
       </main>
     </div>
