@@ -1,7 +1,7 @@
 import './Main.scss';
 
 import Article from './Section/Article';
-import Aside from './Aside';
+import Aside from './Aside/Aside';
 import Nav from '../../../components/Nav/Nav';
 
 function Main() {
