@@ -1,19 +1,43 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Feed from './Components/Feed';
+import Footer from './Components/Footer';
 import { image } from './func';
 
 import './Main.scss';
 
 const Main = () => {
+  const [feeds, setFeeds] = useState([]);
+  useEffect(() => {
+    fetch('/data/FeedData.json', {
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(data => {
+        return setFeeds(data);
+      });
+  }, []);
+
   return (
     <main className="main">
       <section className="centerFrame">
+        {/* <Feed picture={image('profile')} />
         <Feed picture={image('profile')} />
         <Feed picture={image('profile')} />
         <Feed picture={image('profile')} />
         <Feed picture={image('profile')} />
-        <Feed picture={image('profile')} />
-        <Feed picture={image('profile')} />
+        <Feed picture={image('profile')} /> */}
+        {feeds.map((content, i) => {
+          return (
+            <Feed
+              key={i}
+              id={content.id}
+              userName={content.userName}
+              picture={content.picture}
+              feedComment={content.feedComment}
+              createdAt={content.createdAt}
+            />
+          );
+        })}
       </section>
 
       <aside className="side">
@@ -61,12 +85,7 @@ const Main = () => {
             </div>
           </div>
         </section>
-
-        <footer className="suggestedListFooter">
-          Westagram 정보 . 지원 . 홍보 센터 . API . <br />
-          채용정보 . 개인정보처리방침 . 약관 . <br />
-          디렉터리 . 프로필 . 해시태그 . 언어 <br /> @ 2022 WESTAGRAM
-        </footer>
+        <Footer />
       </aside>
     </main>
   );

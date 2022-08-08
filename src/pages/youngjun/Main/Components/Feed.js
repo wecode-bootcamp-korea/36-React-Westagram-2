@@ -4,7 +4,7 @@ import { image } from '../func';
 
 import './Feed.scss';
 
-const Feed = ({ picture }) => {
+const Feed = ({ picture, userName, feedComment, createdAt }) => {
   const [heart, setHeartImg] = useState(image('heart'));
 
   const [commentList, setcommentList] = useState([]);
@@ -46,7 +46,7 @@ const Feed = ({ picture }) => {
       <header className="feedHeader">
         <div className="userNickname">
           <img src={image('profile')} alt="userPicture" />
-          <p> Selp_0100 beHind </p>
+          <p> {userName} </p>
         </div>
         <img src={image('seeMore')} alt="seeMoreImg" />
       </header>
@@ -78,8 +78,8 @@ const Feed = ({ picture }) => {
         </div>
 
         <div className="feedInfo">
-          <span className="feedName"> 닉네임 </span>
-          <span className="feedContent"> 피드내용 </span>
+          <span className="feedName"> {userName} </span>
+          <span className="feedContent"> {feedComment} </span>
         </div>
 
         <div className="commentContent">
@@ -95,7 +95,7 @@ const Feed = ({ picture }) => {
           })}
         </div>
 
-        <p className="createdAt">2시간 전</p>
+        <p className="createdAt"> {createdAt} </p>
       </div>
 
       <form className="commentUpload">
