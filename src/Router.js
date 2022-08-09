@@ -11,12 +11,14 @@ import LoginSeulki from './pages/seulki/Login/Login';
 import MainSeulki from './pages/seulki/Main/Main';
 
 import Entry from './pages/Entry';
+import User from './pages/chaedong/User';
 
 const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Entry />} />
+        <Route path="/user" element={<User />} />
         <Route path="/login-youngjun" element={<LoginYoungjun />} />
         <Route path="/main-youngjun" element={<MainYoungjun />} />
         <Route path="/login-chaedong" element={<LoginChaedong />} />
