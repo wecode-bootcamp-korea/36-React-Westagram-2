@@ -11,7 +11,6 @@ const Feed = () => {
   const buttonStatus = comment => {
     return comment.length > 0;
   };
-
   const addCommnet = e => {
     e.preventDefault();
     setArr([...arr, comment]);
