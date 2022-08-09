@@ -1,6 +1,6 @@
 import './Aside.scss';
 import StoryList from './StoryList';
-import { STORY_LIST } from '../../uiData';
+import { STORY_LIST, ASIDE_MENU_LIST } from '../../uiData';
 
 function Aside() {
   return (
@@ -32,11 +32,13 @@ function Aside() {
                 userId={userList.userId}
                 userDescription={userList.userDescription}
                 profileImg={userList.profileImg}
+                followBtn={false}
               />
             );
           })}
         </div>
       </div>
+
       <div className="asideBox">
         <div className="storyNav">
           <div className="storyNavLeft">
@@ -47,40 +49,33 @@ function Aside() {
           </div>
         </div>
         <div className="storyBoxes">
-          <div className="asideNav">
-            <img
-              src="/images/chaedong/profile-wecode-desk.jpg"
-              alt="userProfileImg"
-            />
-            <div className="asideUserInfo">
-              <p className="userId">chaedong</p>
-              <p className="userDescription">chaedong | 위코드</p>
-            </div>
-            <p className="followButton">팔로우</p>
-          </div>
-          <div className="asideNav">
-            <img
-              src="/images/chaedong/profile-wecode-desk.jpg"
-              alt="userProfileImg"
-            />
-            <div className="asideUserInfo">
-              <p className="userId">chaedong</p>
-              <p className="userDescription">chaedong | 위코드</p>
-            </div>
-            <p className="followButton">팔로우</p>
-          </div>
-          <div className="asideNav">
-            <img
-              src="/images/chaedong/profile-wecode-desk.jpg"
-              alt="userProfileImg"
-            />
-            <div className="asideUserInfo">
-              <p className="userId">chaedong</p>
-              <p className="userDescription">chaedong | 위코드</p>
-            </div>
-            <p className="followButton">팔로우</p>
-          </div>
+          {STORY_LIST.map(userList => {
+            if (userList.userId !== 'chaedong') {
+              return (
+                <StoryList
+                  key={userList.id}
+                  userId={userList.userId}
+                  userDescription={userList.userDescription}
+                  profileImg={userList.profileImg}
+                  followBtn={true}
+                />
+              );
+            }
+            return null;
+          })}
         </div>
+      </div>
+      <div className="asideNav">
+        <ul>
+          {ASIDE_MENU_LIST.map((menu, idx) => {
+            return (
+              <span key={idx} className="userDescription">
+                {menu}&nbsp;
+                {idx !== ASIDE_MENU_LIST.length - 1 && '·'}&nbsp;
+              </span>
+            );
+          })}
+        </ul>
       </div>
     </aside>
   );

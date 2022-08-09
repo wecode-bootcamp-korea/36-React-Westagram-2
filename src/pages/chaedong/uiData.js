@@ -62,3 +62,17 @@ export const FEED_LIST = [
       'https://contents.lotteon.com/itemimage/_v144501/LO/16/98/81/82/55/_1/69/88/18/25/6/LO1698818255_1698818256_1.png',
   },
 ];
+
+export const ASIDE_MENU_LIST = [
+  '소개',
+  '도움말',
+  '홍보 센터',
+  'API',
+  '채용 정보',
+  '개인정보처리방침',
+  '약관',
+  '위치',
+  '인기 계정',
+  '해시태그',
+  '언어',
+];

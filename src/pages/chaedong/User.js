@@ -22,56 +22,6 @@ function User() {
           </ul>
         );
       })}
-      {/* <ul>
-        <li>name</li>
-        <li>email</li>
-        <li>phone</li>
-      </ul>
-      <ul>
-        <li>name</li>
-        <li>email</li>
-        <li>phone</li>
-      </ul>
-      <ul>
-        <li>name</li>
-        <li>email</li>
-        <li>phone</li>
-      </ul>
-      <ul>
-        <li>name</li>
-        <li>email</li>
-        <li>phone</li>
-      </ul>
-      <ul>
-        <li>name</li>
-        <li>email</li>
-        <li>phone</li>
-      </ul>
-      <ul>
-        <li>name</li>
-        <li>email</li>
-        <li>phone</li>
-      </ul>
-      <ul>
-        <li>name</li>
-        <li>email</li>
-        <li>phone</li>
-      </ul>
-      <ul>
-        <li>name</li>
-        <li>email</li>
-        <li>phone</li>
-      </ul>
-      <ul>
-        <li>name</li>
-        <li>email</li>
-        <li>phone</li>
-      </ul>
-      <ul>
-        <li>name</li>
-        <li>email</li>
-        <li>phone</li>
-      </ul> */}
     </div>
   );
 }
