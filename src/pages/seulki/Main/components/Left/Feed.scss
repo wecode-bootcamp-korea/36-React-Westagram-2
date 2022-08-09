@@ -1,0 +1,176 @@
+.article_wrapper {
+  position: relative;
+  margin-bottom: 10px;
+  border: 1px solid lightgrey;
+  // height: 77vh;
+
+  .article_top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 45px;
+    width: 32vw;
+    padding-left: 10px;
+
+    .article_left {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .writer_id {
+        margin-left: 10px;
+        font-weight: bold;
+        font-size: 13px;
+      }
+    }
+
+    .article_right {
+      width: 15px;
+      border-top: 3px dotted grey;
+      margin-right: 12px;
+      border-radius: 0;
+    }
+  }
+
+  .article_pic {
+    width: 100%;
+    height: 47vh;
+    object-fit: cover;
+  }
+
+  .article_middle_icon_wrapper {
+    display: flex;
+    flex-direction: row;
+
+    .article_icons {
+      display: flex;
+      width: 25%;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      margin: 6px auto 6px 5px;
+    }
+
+    .icon_background {
+      background-color: white;
+    }
+
+    .save_icon {
+      margin: 6px 10px 6px 5px;
+      width: 25px;
+      height: 25px;
+      background-color: white;
+    }
+  }
+
+  .liked_users_wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 6px;
+
+    .liked_user_img {
+      margin-left: 10px;
+      border-radius: 100px;
+      border: 1px solid lightgray;
+    }
+
+    .liked_user_info {
+      margin-left: 7px;
+      font-size: 14px;
+    }
+  }
+
+  .article_comments {
+    margin: 0 0 0 12px;
+    font-size: 14px;
+  }
+
+  .article_comments_span {
+    margin: 0 0 0 6px;
+    font-size: 14px;
+  }
+
+  .article_comments_flex_div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-right: 20px;
+
+    .article_comments_span {
+      margin: 0 0 0 6px;
+      font-size: 14px;
+    }
+
+    .comment_like_mini_btn {
+      border: 0;
+      width: 11px;
+      height: 11px;
+    }
+  }
+
+  .inputted_new_comment_overflow_js {
+    overflow: auto;
+    // height: 3vh;
+    padding: 0 0 45px 5px;
+    margin: 1px;
+    width: 99%;
+
+    .new_comment_wrapper {
+      width: 100%;
+      position: relative;
+
+      .new_comment_content_js {
+        font-size: 14px;
+        width: 100px;
+      }
+
+      .new_comment_like_btn_js {
+        border: 0;
+        width: 11px;
+        height: 11px;
+        margin-right: 20px;
+        position: absolute;
+        right: 6px;
+      }
+    }
+  }
+  .input_comments {
+    width: 100%;
+    height: 40px;
+    padding-left: 20px;
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid silver;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+    background-color: white;
+  }
+
+  .input_comments::placeholder {
+    text-align: left;
+  }
+
+  .post_button {
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    color: #c4e1fb;
+    border: none;
+    background: none;
+  }
+
+  .post_button_on {
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    color: #0095f6;
+    border: none;
+    background: none;
+  }
+}

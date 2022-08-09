@@ -1,1 +1,23 @@
 @import '../../../styles/variables.scss';
+.whole_page {
+  background-color: #fafafa;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 12px;
+
+  .bold {
+    font-weight: bold;
+  }
+
+  .main_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fafafa;
+  }
+}
+/*header*/
