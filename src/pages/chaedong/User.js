@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 
 function User() {
   const [userInfoList, setUserInfoList] = useState([]);
-  console.log(userInfoList);
   useEffect(() => {
     fetch('/data/userInfoList.json')
       .then(res => res.json())

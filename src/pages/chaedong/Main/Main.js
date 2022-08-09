@@ -4,15 +4,23 @@ import Article from './Section/Article';
 import Aside from './Aside/Aside';
 import Nav from '../../../components/Nav/Nav';
 
-import { FEED_LIST } from '../uiData';
+import { useEffect, useState } from 'react';
 
 function Main() {
+  const [feedList, setFeedList] = useState([]);
+
+  useEffect(() => {
+    fetch('/data/feedList.json')
+      .then(res => res.json())
+      .then(result => setFeedList(result));
+  }, []);
+
   return (
     <div className="main">
       <Nav />
       <main>
         <section>
-          {FEED_LIST.map(feed => {
+          {feedList.map(feed => {
             return (
               <Article
                 key={feed.id}
