@@ -1,8 +1,14 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Comment from './Comment';
 import './Article.scss';
 
-function Article({ userId, profileImg, feedContents, feedImg }) {
+function Article({
+  userId,
+  profileImg,
+  feedContents,
+  feedImg,
+  commentsListProps,
+}) {
   const [loggedInUserId] = useState('chaedong');
   const [commentsList, setCommentsList] = useState([]);
   const [commentContent, setCommentContent] = useState('');
@@ -15,6 +21,10 @@ function Article({ userId, profileImg, feedContents, feedImg }) {
     setCommentsList([...commentsList, commentContent]);
     setCommentContent('');
   };
+
+  useEffect(() => {
+    setCommentsList([...commentsListProps]);
+  }, []);
 
   return (
     <article className="article">
@@ -47,8 +57,10 @@ function Article({ userId, profileImg, feedContents, feedImg }) {
       </div>
       <div className="articleComments">
         {commentsList.map(
-          (x, id) =>
-            (x = <Comment userId={loggedInUserId} contents={x} key={id} />)
+          (comment, id) =>
+            (comment = (
+              <Comment userId={loggedInUserId} contents={comment} key={id} />
+            ))
         )}
         <div className="articleCommentTime">
           <span>42분 전...</span>

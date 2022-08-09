@@ -8,11 +8,26 @@ import { useEffect, useState } from 'react';
 
 function Main() {
   const [feedList, setFeedList] = useState([]);
+  // commentsList = [
+  //   {id:1, comments: ["ㅇㅇ","ㄴㄴ"]},
+  //   {id:2, comments: ["ㅇㅇ","ㄴㄴ"]},
+  //   {id:3, comments: ["ㅇㅇ","ㄴㄴ"]}
+  // ]
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
 
   useEffect(() => {
     fetch('/data/feedList.json')
       .then(res => res.json())
-      .then(result => setFeedList(result));
+      .then(result => {
+        setFeedList(result);
+      });
   }, []);
 
   return (
@@ -28,6 +43,7 @@ function Main() {
                 profileImg={feed.profileImg}
                 feedContents={feed.feedContents}
                 feedImg={feed.feedImg}
+                commentsListProps={feed.commentsList}
               />
             );
           })}

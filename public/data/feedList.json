@@ -4,20 +4,35 @@
     "userId": "chaedong",
     "profileImg": "/images/chaedong/profile-wecode-desk.jpg",
     "feedContents": "멋있는 사진",
-    "feedImg": "/images/chaedong/article-sanpransisco.jpg"
+    "feedImg": "/images/chaedong/article-sanpransisco.jpg",
+    "commentsList": [
+      "멋있는 사진이네요.",
+      "좋아보입니다.",
+      "Mock Data 같아요!!"
+    ]
   },
   {
     "id": 2,
     "userId": "피카츄",
     "profileImg": "https://mblogthumb-phinf.pstatic.net/20160817_259/retspe_14714118890125sC2j_PNG/%C7%C7%C4%AB%C3%F2_%281%29.png?type=w800",
     "feedContents": "백만볼트",
-    "feedImg": "https://mblogthumb-phinf.pstatic.net/20160817_259/retspe_14714118890125sC2j_PNG/%C7%C7%C4%AB%C3%F2_%281%29.png?type=w800"
+    "feedImg": "https://mblogthumb-phinf.pstatic.net/20160817_259/retspe_14714118890125sC2j_PNG/%C7%C7%C4%AB%C3%F2_%281%29.png?type=w800",
+    "commentsList": [
+      "222멋있는 사진이네요.",
+      "222좋아보입니다.",
+      "222Mock Data 같아요!!"
+    ]
   },
   {
     "id": 3,
     "userId": "라이츄",
     "profileImg": "https://mblogthumb-phinf.pstatic.net/20160817_259/retspe_14714118890125sC2j_PNG/%C7%C7%C4%AB%C3%F2_%281%29.png?type=w800",
     "feedContents": "라이 라이~",
-    "feedImg": "https://contents.lotteon.com/itemimage/_v144501/LO/16/98/81/82/55/_1/69/88/18/25/6/LO1698818255_1698818256_1.png"
+    "feedImg": "https://contents.lotteon.com/itemimage/_v144501/LO/16/98/81/82/55/_1/69/88/18/25/6/LO1698818255_1698818256_1.png",
+    "commentsList": [
+      "333멋있는 사진이네요.",
+      "333좋아보입니다.",
+      "333Mock Data 같아요!!"
+    ]
   }
 ]
