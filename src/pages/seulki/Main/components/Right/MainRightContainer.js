@@ -1,5 +1,6 @@
 import React from 'react';
 import './MainRightContainer.scss';
+import Copywriter from './Copywriter';
 
 const MainRightContainer = () => {
   return (
@@ -143,13 +144,7 @@ const MainRightContainer = () => {
           <button className="follow_button">팔로우</button>
         </div>
       </div>
-      <div className="copywriter_wrapper">
-        <p className="copywriter color_grey">
-          Westagram 정보·지원·홍보 센터·API·채용
-          정보·개인정보처리방침·약관·디렉터리·프로필·해시태그·언어
-        </p>
-        <p className="copywriter color_grey">© 2022 WESTAGRAM</p>
-      </div>
+      <Copywriter />
     </div>
   );
 };
