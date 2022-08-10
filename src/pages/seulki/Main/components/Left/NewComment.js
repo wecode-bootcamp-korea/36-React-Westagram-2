@@ -1,5 +1,5 @@
 import React from 'react';
-import SingleComment from './SingleComment.js';
+import SingleComment from './SingleComment';
 
 const NewComment = ({ arr }) => {
   return (

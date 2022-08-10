@@ -1,3 +1,4 @@
+import { COPYWRITER } from './company';
 import './Copywriter.scss';
 
 const Copywriter = () => {
@@ -13,22 +14,6 @@ const Copywriter = () => {
 };
 
 export default Copywriter;
-
-const COPYWRITER = [
-  'Westagram',
-  '정보',
-  '·지원',
-  '·홍보 센터',
-  '·API',
-  '·채용 정보',
-  '·개인정보처리방침',
-  '·약관',
-  '·디렉터리',
-  '·프로필',
-  '·해시태그',
-  '·언어',
-  '© 2022 WESTAGRAM',
-];
 
 // const COPYWRITER = [
 //   {

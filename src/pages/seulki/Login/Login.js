@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './Login.scss';
-// import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
+import Button from './Button';
+import './Login.scss';
 
 function Login() {
   const [id, setId] = useState('');
@@ -42,16 +42,13 @@ function Login() {
             valuse={pw}
             onChange={saveUserPw}
           />
-          <button
-            className={
-              buttonStatus(id, pw) ? 'login_btn' : 'login_btn_disabled'
-            }
-            onClick={goToMain}
-            disabled={buttonStatus(id, pw) ? false : true}
-          >
-            로그인
-          </button>
-
+          <Button
+            key={1}
+            id={id}
+            pw={pw}
+            buttonStatus={buttonStatus}
+            goToMain={goToMain}
+          />
           <a
             className="forgotPw"
             href="https://www.instagram.com/accounts/password/reset/"

@@ -2,7 +2,16 @@ import React, { useState } from 'react';
 import NewComment from './NewComment';
 import './Feed.scss';
 
-const Feed = () => {
+const Feed = ({
+  userImg,
+  username,
+  picture,
+  likedUser,
+  likedPeople,
+  content,
+  comment_id,
+  comment_,
+}) => {
   const [comment, setComment] = useState('');
   const [arr, setArr] = useState([]);
   const savedComment = e => {
@@ -24,16 +33,16 @@ const Feed = () => {
           <img
             className="feed_profile_pic"
             alt="cat_profile_pic"
-            src="https://images.unsplash.com/photo-1598589290625-9b04630ec5d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y2F0JTIwZmFjZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+            src={userImg}
           />
-          <button className="writer_id">imacutecat</button>
+          <button className="writer_id">{username}</button>
         </div>
         <div className="article_right" />
       </div>
       <img
         className="article_pic"
         alt="cat_fell_asleep_on_the_laptop"
-        src="https://images.unsplash.com/photo-1634838080334-28befa9efe80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2F0JTIwY29kaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
+        src={picture}
       />
       <div className="article_middle_icon_wrapper">
         <div className="article_icons">
@@ -78,11 +87,11 @@ const Feed = () => {
         />
         <span className="liked_user_info">
           <button>
-            <span className="bold">happy_hamster</span>
+            <span className="bold">{likedUser}</span>
           </button>
           님
           <button>
-            <span className="bold">외 300명</span>
+            <span className="bold">외 {likedPeople}명</span>
           </button>
           이 좋아합니다
         </span>
@@ -90,19 +99,17 @@ const Feed = () => {
       <div>
         <div>
           <button className="article_comments">
-            <span className="bold">imacutecat</span>
+            <span className="bold">{username}</span>
           </button>
-          <span className="article_comments_span">
-            오늘도 코딩하다 잠들어버렸😪...
-          </span>
+          <span className="article_comments_span">{content}</span>
           <button className="color_grey">더 보기</button>
         </div>
         <div className="article_comments_flex_div">
           <div>
             <button className="article_comments">
-              <span className="bold">woof.09</span>
+              <span className="bold">{comment_id}</span>
             </button>
-            <span className="article_comments_span">그만자 제발🤨</span>
+            <span className="article_comments_span">{comment_}</span>
           </div>
           <button className="comment_like_btn">
             <img

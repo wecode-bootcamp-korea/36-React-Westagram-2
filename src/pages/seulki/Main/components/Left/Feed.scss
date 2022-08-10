@@ -2,7 +2,8 @@
   position: relative;
   margin-bottom: 10px;
   border: 1px solid lightgrey;
-  // height: 77vh;
+  border-radius: 2px;
+  background-color: white;
 
   .article_top {
     display: flex;
@@ -34,9 +35,10 @@
   }
 
   .article_pic {
-    width: 100%;
+    width: 32vw;
     height: 47vh;
     object-fit: cover;
+    border-radius: 2px;
   }
 
   .article_middle_icon_wrapper {

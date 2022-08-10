@@ -1,0 +1,48 @@
+[
+  {
+    "id": 1,
+    "username": "imacutecat",
+    "userImg": "https://images.unsplash.com/photo-1598589290625-9b04630ec5d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y2F0JTIwZmFjZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60",
+    "picture": "https://images.unsplash.com/photo-1634838080334-28befa9efe80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2F0JTIwY29kaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    "likedUser": "happy_hamster",
+    "likedPeople": 100,
+    "content": "오늘도 코딩하다 잠들어버렸😪...",
+    "comment_id": "woof.09",
+    "comment": "그만자 제발..🤨"
+  },
+  {
+    "id": 2,
+    "username": "aus_love",
+    "userImg": "https://images.unsplash.com/photo-1504575958497-ccdd586c2997?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8YXVzdHJhbGlhfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    "picture": "https://images.unsplash.com/photo-1529108190281-9a4f620bc2d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXVzdHJhbGlhfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    "likedUser": "sleepyhead",
+    "likedPeople": 300,
+    "content": "날씨 미쳤다 진짜..",
+    "comment_id": "sleepyhead",
+    "comment": "와 호주 가고싶다😣"
+  },
+
+  {
+    "id": 3,
+    "username": "sleepyhead",
+    "userImg": "https://images.unsplash.com/photo-1600681470391-13ffc9ee82e3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGdpcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60",
+    "picture": "https://images.unsplash.com/photo-1514294393539-47d3b28b819d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGF1c3RyYWxpYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60",
+    "likedUser": "everydayParty",
+    "likedPeople": 50,
+    "content": "여행갈사람?!😎..",
+    "comment_id": "mylion",
+    "comment": "저요 저요!!"
+  },
+
+  {
+    "id": 4,
+    "username": "suzieeee",
+    "userImg": "https://images.unsplash.com/photo-1608270586620-248524c67de9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8YmVlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60",
+    "picture": "images/seulki/IMG_3011.jpeg",
+    "likedUser": "everydayParty",
+    "likedPeople": 54,
+    "content": "민재님이 주신 초코마카롱😍...",
+    "comment_id": "imsol",
+    "comment": "이거 진짜 맛있음요 👍"
+  }
+]

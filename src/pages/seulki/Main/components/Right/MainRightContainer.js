@@ -1,6 +1,6 @@
 import React from 'react';
-import './MainRightContainer.scss';
 import Copywriter from './Copywriter';
+import './MainRightContainer.scss';
 
 const MainRightContainer = () => {
   return (
