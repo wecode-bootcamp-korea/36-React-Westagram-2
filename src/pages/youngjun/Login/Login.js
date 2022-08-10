@@ -5,10 +5,12 @@ import './Login.scss';
 import Signup from './SignUp';
 
 const Login = () => {
-  const [userId, setUserId] = useState('');
-  const [userPassword, setUserPassword] = useState('');
   const [disabled, setDisabled] = useState(true);
   const [btnName, setBtnName] = useState('loginBtn');
+  const [userInfo, setUserINfo] = useState({
+    id: '',
+    password: '',
+  });
 
   const [signupState, setSignupState] = useState(false);
 
@@ -23,18 +25,17 @@ const Login = () => {
     navigate('/main-youngjun');
   };
 
-  const saveUserId = e => {
-    setUserId(e.target.value);
-  };
-
-  const saveUserPassword = e => {
-    setUserPassword(e.target.value);
+  const getUserInfo = e => {
+    const { name, value } = e.target;
+    setUserINfo({ ...userInfo, [name]: value });
   };
 
   const checkId = /[@]/;
 
   const loginVali = () => {
-    userPassword.length >= 5 && checkId.test(userId) && userId.length >= 1
+    userInfo.password.length >= 5 &&
+    checkId.test(userInfo.id) &&
+    userInfo.id.length >= 1
       ? stateConvert(false, 'loginBtnActive')
       : stateConvert(true, 'loginBtn');
   };
@@ -50,20 +51,20 @@ const Login = () => {
         <header className="logoHeader"> westagram </header>
         <form className="inputBox">
           <input
+            name="id"
             className="userId"
             type="text"
             placeholder="전화번호, 사용자 이름 또는 이메일"
-            onChange={saveUserId}
+            onChange={getUserInfo}
             onKeyUp={loginVali}
-            value={userId}
           />
           <input
+            name="password"
             className="password"
             type="password"
             placeholder="비밀번호"
-            onChange={saveUserPassword}
+            onChange={getUserInfo}
             onKeyUp={loginVali}
-            value={userPassword}
           />
           <button
             className={btnName}
