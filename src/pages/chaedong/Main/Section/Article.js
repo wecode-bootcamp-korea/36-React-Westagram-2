@@ -12,6 +12,7 @@ function Article({
   const [loggedInUserId] = useState('chaedong');
   const [commentsList, setCommentsList] = useState([]);
   const [commentContent, setCommentContent] = useState('');
+
   const inputComment = e => setCommentContent(e.target.value);
   const submitComment = e => {
     e.preventDefault();

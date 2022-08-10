@@ -46,7 +46,7 @@ function Login() {
               isValidInputs(userInfo) ? 'enabledButton' : 'disabledButton'
             }
             type="submit"
-            disabled={isValidInputs(userInfo) ? false : true}
+            disabled={!isValidInputs(userInfo)}
           >
             로그인
           </button>
