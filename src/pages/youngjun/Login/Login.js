@@ -20,11 +20,6 @@ const Login = () => {
 
   const navigate = useNavigate();
 
-  const mainPageRouter = e => {
-    e.preventDefault();
-    navigate('/main-youngjun');
-  };
-
   const getUserInfo = e => {
     const { name, value } = e.target;
     setUserINfo({ ...userInfo, [name]: value });
@@ -45,11 +40,30 @@ const Login = () => {
     setBtnName(className);
   };
 
+  const loginToMain = () => {
+    fetch('https://westagram-signup.herokuapp.com/login', {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      method: 'POST',
+      body: JSON.stringify({ id: userInfo.id, password: userInfo.password }),
+    })
+      .then(res => res.json())
+      .then(alert('login success!'))
+      .then(data => {
+        if (data.message === 'SUCCESS') {
+          localStorage.setItem('token', data.token);
+        }
+      })
+      .then(navigate('/main-youngjun'))
+      .catch(rej => alert(rej));
+  };
+
   return (
     <>
       <main className="container">
         <header className="logoHeader"> westagram </header>
-        <form className="inputBox">
+        <div className="inputBox">
           <input
             name="id"
             className="userId"
@@ -66,18 +80,14 @@ const Login = () => {
             onChange={getUserInfo}
             onKeyUp={loginVali}
           />
-          <button
-            className={btnName}
-            disabled={disabled}
-            onClick={mainPageRouter}
-          >
+          <button className={btnName} disabled={disabled} onClick={loginToMain}>
             로그인
           </button>
-        </form>
+        </div>
         <p className="what" onClick={onOffSignup}>
           회원가입
         </p>
-        <p className="what"> 비밀번호를 잊으셨나요? </p>
+        <p className="what">비밀번호를 잊으셨나요?</p>
       </main>
       {signupState && (
         <Signup setSignupState={setSignupState} onoffSignup={onOffSignup} />

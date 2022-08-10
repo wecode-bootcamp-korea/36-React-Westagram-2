@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import './Signup.scss';
 
 const Signup = ({ onoffSignup }) => {
-  const [userId, setUserId] = useState('');
-  const [userPassword, setUserPassword] = useState('');
+  const [userInfo, setUserINfo] = useState({
+    id: '',
+    password: '',
+  });
 
   const closeSignup = e => {
     if (e.target === e.currentTarget) {
@@ -11,44 +13,42 @@ const Signup = ({ onoffSignup }) => {
     }
   };
 
-  const saveUserId = e => {
-    setUserId(e.target.value);
+  const getUserInfo = e => {
+    e.preventDefault();
+    const { name, value } = e.target;
+    setUserINfo({ ...userInfo, [name]: value });
   };
 
-  const saveUserPassword = e => {
-    setUserPassword(e.target.value);
+  const registrationInfo = () => {
+    fetch('https://westagram-signup.herokuapp.com/signup', {
+      method: 'POST',
+      body: JSON.stringify({ id: userInfo.id, password: userInfo.password }),
+    })
+      .then(res => res.json())
+      .then(alert('good!'))
+      .then(closeSignup)
+      .catch(rej => alert(rej));
   };
-
-  // useEffect(() => {
-  //   fetch('https://westagram-signup.herokuapp.com/signup', {
-  //     id: userId,
-  //     password: userPassword,
-  //   })
-  //     .then(res => res.json())
-  //     .catch(res => {
-  //       console.log('fail');
-  //     });
-  // }, []);
 
   return (
     <div className="backgroudSignup" onClick={closeSignup}>
       <main className="signUpcontainer">
         <div className="signUpInputBox">
           <input
+            name="id"
             className="userId"
             type="text"
             placeholder="전화번호, 사용자 이름 또는 이메일"
-            onChange={saveUserId}
-            value={userId}
+            onChange={getUserInfo}
           />
           <input
+            name="password"
             className="password"
             type="password"
             placeholder="비밀번호"
-            onChange={saveUserPassword}
-            value={userPassword}
+            onChange={getUserInfo}
           />
-          <button className="btn" onClick={() => alert('미구현')}>
+          <button className="btn" onClick={registrationInfo}>
             회원가입
           </button>
           <button className="btn" onClick={onoffSignup}>

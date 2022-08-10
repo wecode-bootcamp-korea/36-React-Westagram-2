@@ -41,12 +41,26 @@ const Feed = ({ content: { picture, userName, feedComment, createdAt } }) => {
     setCommentValue(e.target.value);
   };
 
+  const token = localStorage.getItem('token');
+
+  const checkInfo = () => {
+    fetch(' https://westagram-signup.herokuapp.com/profile', {
+      method: 'GET',
+      headers: {
+        Authorization: token,
+      },
+    })
+      .then(res => res.json())
+      .then(res => alert(res))
+      .catch(rej => alert(rej));
+  };
+
   return (
     <article className="feeds">
       <header className="feedHeader">
         <div className="userNickname">
           <img src={image('profile')} alt="userPicture" />
-          <p> {userName} </p>
+          <p onClick={checkInfo}> {userName} </p>
         </div>
         <img src={image('seeMore')} alt="seeMoreImg" />
       </header>
