@@ -8,7 +8,7 @@ const Login = () => {
   const [disabled, setDisabled] = useState(true);
   const [btnName, setBtnName] = useState('loginBtn');
   const [userInfo, setUserINfo] = useState({
-    id: '',
+    email: '',
     password: '',
   });
 
@@ -29,8 +29,8 @@ const Login = () => {
 
   const loginVali = () => {
     userInfo.password.length >= 5 &&
-    checkId.test(userInfo.id) &&
-    userInfo.id.length >= 1
+    checkId.test(userInfo.email) &&
+    userInfo.email.length >= 1
       ? stateConvert(false, 'loginBtnActive')
       : stateConvert(true, 'loginBtn');
   };
@@ -41,20 +41,20 @@ const Login = () => {
   };
 
   const loginToMain = () => {
-    fetch('https://westagram-signup.herokuapp.com/login', {
+    fetch('http://10.58.5.66:3000/auth/signin', {
+      method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      method: 'POST',
-      body: JSON.stringify({ id: userInfo.id, password: userInfo.password }),
+      body: JSON.stringify({
+        email: userInfo.email,
+        password: userInfo.password,
+      }),
     })
       .then(res => res.json())
       .then(alert('login success!'))
-      .then(data => {
-        if (data.message === 'SUCCESS') {
-          localStorage.setItem('token', data.token);
-        }
-      })
+      .then(data => localStorage.setItem('token', data.accessToken))
+      // .then(console.log(localStorage.getItem('token')))
       .then(navigate('/main-youngjun'))
       .catch(rej => alert(rej));
   };
@@ -65,7 +65,7 @@ const Login = () => {
         <header className="logoHeader"> westagram </header>
         <div className="inputBox">
           <input
-            name="id"
+            name="email"
             className="userId"
             type="text"
             placeholder="전화번호, 사용자 이름 또는 이메일"
@@ -80,7 +80,12 @@ const Login = () => {
             onChange={getUserInfo}
             onKeyUp={loginVali}
           />
-          <button className={btnName} disabled={disabled} onClick={loginToMain}>
+          <button
+            className={btnName}
+            type="button"
+            disabled={disabled}
+            onClick={loginToMain}
+          >
             로그인
           </button>
         </div>

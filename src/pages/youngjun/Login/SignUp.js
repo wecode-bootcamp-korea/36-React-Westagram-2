@@ -3,7 +3,7 @@ import './Signup.scss';
 
 const Signup = ({ onoffSignup }) => {
   const [userInfo, setUserINfo] = useState({
-    id: '',
+    email: '',
     password: '',
   });
 
@@ -20,11 +20,17 @@ const Signup = ({ onoffSignup }) => {
   };
 
   const registrationInfo = () => {
-    fetch('https://westagram-signup.herokuapp.com/signup', {
+    fetch('http://10.58.5.66:3000/auth/signup', {
       method: 'POST',
-      body: JSON.stringify({ id: userInfo.id, password: userInfo.password }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        email: userInfo.email,
+        password: userInfo.password,
+      }),
     })
-      .then(res => res.json())
+      // .then(res => res.json())
       .then(alert('good!'))
       .then(closeSignup)
       .catch(rej => alert(rej));
@@ -35,7 +41,7 @@ const Signup = ({ onoffSignup }) => {
       <main className="signUpcontainer">
         <div className="signUpInputBox">
           <input
-            name="id"
+            name="email"
             className="userId"
             type="text"
             placeholder="전화번호, 사용자 이름 또는 이메일"
