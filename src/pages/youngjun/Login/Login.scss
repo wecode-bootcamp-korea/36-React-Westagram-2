@@ -13,11 +13,13 @@
   background-color: white;
 }
 
-.logoHeader {
-  font-family: 'Nanum Pen Script', cursive;
-  max-height: 100%;
-  max-width: 100%;
-  font-size: 100px;
+.login {
+  .logoHeader {
+    font-family: 'Nanum Pen Script', cursive;
+    max-height: 100%;
+    max-width: 100%;
+    font-size: 100px;
+  }
 }
 
 .inputBox {

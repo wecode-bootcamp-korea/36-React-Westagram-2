@@ -5,22 +5,25 @@ import { image } from '../func';
 import './Feed.scss';
 
 const Feed = ({ content: { picture, userName, feedComment, createdAt } }) => {
+  // Review: 잘못된 state 활용, 최종 결과물이 아닌, 나타내고자 하는 값에 맞게
   const [heart, setHeartImg] = useState(image('heart'));
+  // like? 
+  const [isLike, setIsLike] = useState(false)
 
   const [commentList, setcommentList] = useState([]);
   const [commentValue, setCommentValue] = useState('');
 
   const changeHeart = () => {
-    heart === image('heart')
-      ? setHeartImg(image('likeHeart'))
-      : setHeartImg(image('heart'));
+    // isLike ? setIsLike(false) : setIsLike(true)
+    setIsLike(!isLike)
+    // condition ? true value : false value
   };
 
   const onSubmit = e => {
     e.preventDefault();
-    if (commentValue === '') {
-      return;
-    }
+    // Review: {} 생략
+    if (commentValue === '') return
+    // Review: Math.random을 id로 사용하는 것 X
     const id = Math.random();
     const userName = '닉네임';
     const comment = commentValue;
@@ -30,6 +33,7 @@ const Feed = ({ content: { picture, userName, feedComment, createdAt } }) => {
   };
 
   const deleteComment = id => {
+    // Review: return {} 생략
     setcommentList(
       commentList.filter(comment => {
         return comment.id !== id;
@@ -75,7 +79,7 @@ const Feed = ({ content: { picture, userName, feedComment, createdAt } }) => {
           <div className="feedIconsLeft">
             <img
               className="heartImg"
-              src={heart}
+              src={isLike ? "likeHeart.png" : "heart.png"}
               alt="heartImg"
               onClick={changeHeart}
             />

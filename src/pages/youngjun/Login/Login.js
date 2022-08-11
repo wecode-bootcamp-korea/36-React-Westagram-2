@@ -5,13 +5,21 @@ import './Login.scss';
 import Signup from './SignUp';
 
 const Login = () => {
-  const [disabled, setDisabled] = useState(true);
-  const [btnName, setBtnName] = useState('loginBtn');
+  // Review: 불필요한 state
+  // const [disabled, setDisabled] = useState(true);
+  // const [btnName, setBtnName] = useState('loginBtn');
+
   const [userInfo, setUserINfo] = useState({
     email: '',
     password: '',
   });
+  const isUserInputValid = userInfo.email.length > 1 && userInfo.password.length > 5
+  const btnName = (isUserInputValid) ? "loginBtnActive" : "loginBtn"
 
+  // Review: 변수명
+  // data, info
+  // array, string, object
+  // const users
   const [signupState, setSignupState] = useState(false);
 
   const onOffSignup = () => {
@@ -20,6 +28,7 @@ const Login = () => {
 
   const navigate = useNavigate();
 
+  // Review: 함수명
   const getUserInfo = e => {
     const { name, value } = e.target;
     setUserINfo({ ...userInfo, [name]: value });
@@ -27,6 +36,7 @@ const Login = () => {
 
   const checkId = /[@]/;
 
+  // Review: 함수명
   const loginVali = () => {
     userInfo.password.length >= 5 &&
     checkId.test(userInfo.email) &&
@@ -39,6 +49,7 @@ const Login = () => {
     setDisabled(boolean);
     setBtnName(className);
   };
+
 
   const loginToMain = () => {
     fetch('http://10.58.5.66:3000/auth/signin', {
@@ -57,11 +68,13 @@ const Login = () => {
       // .then(console.log(localStorage.getItem('token')))
       .then(navigate('/main-youngjun'))
       .catch(rej => alert(rej));
+      // Review: 동작 X
   };
 
+  // Review: className
   return (
     <>
-      <main className="container">
+      <main className="login">
         <header className="logoHeader"> westagram </header>
         <div className="inputBox">
           <input
@@ -83,7 +96,7 @@ const Login = () => {
           <button
             className={btnName}
             type="button"
-            disabled={disabled}
+            disabled={!isUserInputValid}
             onClick={loginToMain}
           >
             로그인
