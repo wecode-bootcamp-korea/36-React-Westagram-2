@@ -5,16 +5,14 @@ import { image } from '../func';
 import './Feed.scss';
 
 const Feed = ({ content: { picture, userName, feedComment, createdAt } }) => {
-  const [heart, setHeartImg] = useState(image('heart'));
+  const [isLike, setIsLike] = useState(false);
+
+  const changeHeart = () => {
+    setIsLike(!isLike);
+  };
 
   const [commentList, setcommentList] = useState([]);
   const [commentValue, setCommentValue] = useState('');
-
-  const changeHeart = () => {
-    heart === image('heart')
-      ? setHeartImg(image('likeHeart'))
-      : setHeartImg(image('heart'));
-  };
 
   const onSubmit = e => {
     e.preventDefault();
@@ -30,11 +28,7 @@ const Feed = ({ content: { picture, userName, feedComment, createdAt } }) => {
   };
 
   const deleteComment = id => {
-    setcommentList(
-      commentList.filter(comment => {
-        return comment.id !== id;
-      })
-    );
+    setcommentList(commentList.filter(comment => comment.id !== id));
   };
 
   const commentEvent = e => {
@@ -75,7 +69,7 @@ const Feed = ({ content: { picture, userName, feedComment, createdAt } }) => {
           <div className="feedIconsLeft">
             <img
               className="heartImg"
-              src={heart}
+              src={isLike ? image('likeHeart') : image('heart')}
               alt="heartImg"
               onClick={changeHeart}
             />

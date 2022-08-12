@@ -19,9 +19,9 @@ const Main = () => {
   return (
     <main className="main">
       <section className="centerFrame">
-        {feeds.map((content, i) => {
-          return <Feed key={i} content={content} />;
-        })}
+        {feeds.map(feed => (
+          <Feed key={feed.id} content={feed} />
+        ))}
       </section>
 
       <RightSide />

@@ -37,7 +37,7 @@ const Signup = ({ onoffSignup }) => {
   };
 
   return (
-    <div className="backgroudSignup" onClick={closeSignup}>
+    <div className="Signup" onClick={closeSignup}>
       <main className="signUpcontainer">
         <div className="signUpInputBox">
           <input

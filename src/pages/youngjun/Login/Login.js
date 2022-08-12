@@ -5,39 +5,31 @@ import './Login.scss';
 import Signup from './SignUp';
 
 const Login = () => {
-  const [disabled, setDisabled] = useState(true);
-  const [btnName, setBtnName] = useState('loginBtn');
-  const [userInfo, setUserINfo] = useState({
+  const [userInfo, setUserInfo] = useState({
     email: '',
     password: '',
   });
 
-  const [signupState, setSignupState] = useState(false);
+  const [signupModal, setSignupModal] = useState(false);
 
   const onOffSignup = () => {
-    setSignupState(!signupState);
-  };
-
-  const navigate = useNavigate();
-
-  const getUserInfo = e => {
-    const { name, value } = e.target;
-    setUserINfo({ ...userInfo, [name]: value });
+    setSignupModal(!signupModal);
   };
 
   const checkId = /[@]/;
 
-  const loginVali = () => {
+  const isUserInputValid =
     userInfo.password.length >= 5 &&
     checkId.test(userInfo.email) &&
-    userInfo.email.length >= 1
-      ? stateConvert(false, 'loginBtnActive')
-      : stateConvert(true, 'loginBtn');
-  };
+    userInfo.email.length >= 1;
 
-  const stateConvert = (boolean, className) => {
-    setDisabled(boolean);
-    setBtnName(className);
+  const btnName = isUserInputValid ? 'loginBtnActive' : 'loginBtn';
+
+  const navigate = useNavigate();
+
+  const setUserInput = e => {
+    const { name, value } = e.target;
+    setUserInfo({ ...userInfo, [name]: value });
   };
 
   const loginToMain = () => {
@@ -61,29 +53,27 @@ const Login = () => {
 
   return (
     <>
-      <main className="container">
-        <header className="logoHeader"> westagram </header>
+      <main className="Login">
+        <h1 className="logoHeader"> westagram </h1>
         <div className="inputBox">
           <input
             name="email"
             className="userId"
             type="text"
             placeholder="전화번호, 사용자 이름 또는 이메일"
-            onChange={getUserInfo}
-            onKeyUp={loginVali}
+            onChange={setUserInput}
           />
           <input
             name="password"
             className="password"
             type="password"
             placeholder="비밀번호"
-            onChange={getUserInfo}
-            onKeyUp={loginVali}
+            onChange={setUserInput}
           />
           <button
             className={btnName}
             type="button"
-            disabled={disabled}
+            disabled={isUserInputValid}
             onClick={loginToMain}
           >
             로그인
@@ -94,9 +84,7 @@ const Login = () => {
         </p>
         <p className="what">비밀번호를 잊으셨나요?</p>
       </main>
-      {signupState && (
-        <Signup setSignupState={setSignupState} onoffSignup={onOffSignup} />
-      )}
+      {signupModal && <Signup onoffSignup={onOffSignup} />}
     </>
   );
 };

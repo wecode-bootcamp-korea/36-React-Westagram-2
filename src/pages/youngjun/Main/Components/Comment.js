@@ -4,12 +4,10 @@ import { image } from '../func';
 import './Comment.scss';
 
 const Comment = ({ comments: { comment, userName }, deleteComment }) => {
-  const [heart, setHeartImg] = useState(image('heart'));
+  const [isLike, setIsLike] = useState(false);
 
   const changeHeart = () => {
-    heart === image('heart')
-      ? setHeartImg(image('likeHeart'))
-      : setHeartImg(image('heart'));
+    setIsLike(!isLike);
   };
 
   return (
@@ -19,7 +17,11 @@ const Comment = ({ comments: { comment, userName }, deleteComment }) => {
         <span>{comment}</span>
       </div>
       <div className="commentsIcon">
-        <img src={heart} alt="heartImg" onClick={changeHeart} />
+        <img
+          src={isLike ? image('likeHeart') : image('heart')}
+          alt="heartImg"
+          onClick={changeHeart}
+        />
         <img src={image('deleteImg')} alt="deleteImg" onClick={deleteComment} />
       </div>
     </div>
