@@ -1,0 +1,56 @@
+.nav_bar_container {
+  width: 100vw;
+  height: 9vh;
+  margin: 0;
+  padding-top: 0;
+  background-color: white;
+  border: 1px solid lightgrey;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+
+  .nav_left_side_logo_wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+
+    .logo {
+      font-size: 25px;
+
+      .logo_link {
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+  .nav_center_search_wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+
+    .nav_search {
+      width: 13vw;
+      border: 1px solid lightgrey;
+      background-color: #fafafa;
+    }
+    .nav_search::placeholder {
+      text-align: center;
+    }
+
+    .search_img {
+      position: absolute;
+      width: 10px;
+      right: 60%;
+    }
+  }
+
+  .nav_right_side_icons_wrapper {
+    width: 130px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 40px;
+  }
+}

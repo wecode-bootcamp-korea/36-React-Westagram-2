@@ -1,1 +1,51 @@
 @import '../../../styles/variables.scss';
+.whole_page {
+  background: none;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 12px;
+
+  .bold {
+    font-weight: bold;
+  }
+
+  .main_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 80%;
+    margin: 60px auto;
+    padding: 30px;
+    background-color: #fafafa;
+
+    .feed_profile_pic {
+      border-radius: 100px;
+      width: 30px;
+      height: 30px;
+      padding: 1px;
+    }
+
+    p,
+    strong {
+      background-color: white;
+    }
+
+    button {
+      border: none;
+      display: inline-block;
+      cursor: pointer;
+      padding: 0;
+      background: none;
+      text-align: left;
+    }
+
+    input:focus {
+      border: 1px solid #b2b0b0;
+      outline: none;
+    }
+
+    .color_grey {
+      color: #b2b0b0;
+    }
+  }
+}
