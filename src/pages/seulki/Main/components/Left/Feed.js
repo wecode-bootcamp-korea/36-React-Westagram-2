@@ -14,9 +14,8 @@ const Feed = ({
 }) => {
   const [comment, setComment] = useState('');
   const [arr, setArr] = useState([]);
-  const savedComment = e => {
-    setComment(e.target.value);
-  };
+  const savedComment = e => setComment(e.target.value);
+
   const buttonStatus = comment => {
     return comment.length > 0;
   };
