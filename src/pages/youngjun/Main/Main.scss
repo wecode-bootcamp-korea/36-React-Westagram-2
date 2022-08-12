@@ -1,1 +1,99 @@
 @import '../../../styles/variables.scss';
+
+/* main */
+.main {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  background-color: $backgroundColor;
+
+  .centerFrame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 15px 15px 15px;
+  }
+
+  .side {
+    display: flex;
+    flex-direction: column;
+    width: 260px;
+    margin-top: 15px;
+    margin-left: 5px;
+
+    .loginUserInfoImg {
+      display: flex;
+      align-items: center;
+      @at-root {
+        .user {
+          @include flex(null, center);
+
+          .userInfo {
+            display: flex;
+            flex-direction: column;
+            font-size: 12px;
+
+            .loginInfo {
+              margin-top: 5px;
+              color: #bdbdbd;
+            }
+          }
+        }
+      }
+
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 15px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  @media screen and (max-width: 680px) {
+    .side {
+      display: none;
+    }
+  }
+
+  .suggestedList {
+    margin: 10px 0;
+    max-height: 200px;
+    background-color: white;
+    border: 1px solid #bdbdbd;
+    border-radius: 10px;
+    overflow-y: scroll;
+
+    .suggestedListHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 15px;
+      height: 30px;
+      font-size: 12px;
+    }
+    .userBox {
+      @include flex(space-between, center);
+      margin: 0 10px;
+      padding: 5px;
+      img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-right: 15px;
+        cursor: pointer;
+      }
+    }
+  }
+  .follow {
+    color: blue;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .suggestedListFooter {
+    color: #bdbdbd;
+    font-size: 11px;
+  }
+}

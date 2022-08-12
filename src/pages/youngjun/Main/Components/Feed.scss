@@ -1,0 +1,115 @@
+@import '../../../../styles/variables.scss';
+
+.feeds {
+  width: 420px;
+  background-color: white;
+  border: 1px solid #bdbdbd;
+  border-radius: 10px;
+  margin-bottom: 20px;
+
+  .feedHeader {
+    @include flex(space-between, center);
+    height: 50px;
+    padding: 0 15px;
+
+    .userNickname {
+      @include flex(null, center);
+      img {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      p {
+        font-size: 13px;
+      }
+    }
+  }
+
+  .pictures {
+    width: 100%;
+    height: 400px;
+  }
+
+  .feedIcons {
+    @include flex(space-between, center);
+    height: 45px;
+    padding: 0 15px;
+
+    img {
+      width: 20px;
+      height: 20px;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+  }
+
+  .feedLike {
+    @include flex(null, center);
+    padding: 5px;
+    margin: 10px;
+
+    img {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    span {
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 13px;
+    }
+  }
+
+  .feedInfo {
+    @include flex(null, center);
+    padding: 0 15px;
+    font-size: 12px;
+
+    .feedName {
+      margin-right: 8px;
+      font-size: 15px;
+      font-weight: bold;
+    }
+  }
+
+  .commentContent {
+    display: flex;
+    flex-direction: column;
+    padding: 6px;
+  }
+
+  .createdAt {
+    color: #bdbdbd;
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0 15px 10px;
+  }
+
+  .commentUpload {
+    display: flex;
+    padding: 5px 15px;
+    border-top: 1px solid #bdbdbd;
+
+    input {
+      padding: 5px;
+      border: none;
+      outline: none;
+      width: 100%;
+    }
+
+    button {
+      width: 50px;
+      color: blue;
+      background-color: white;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}

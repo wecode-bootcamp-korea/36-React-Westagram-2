@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "userName": "Selp_0100 beHind",
+    "feedComment": "좋네요",
+    "picture": "images/youngjun/profile.png",
+    "createdAt": "3시간전"
+  },
+  {
+    "id": 2,
+    "userName": "나나",
+    "feedComment": "ㅎㅎ",
+    "picture": "images/youngjun/profile_2.png",
+    "createdAt": "10시간전"
+  },
+  {
+    "id": 3,
+    "userName": "testUser",
+    "feedComment": "ㅋㅋㅋ",
+    "picture": "images/youngjun/instagram.png",
+    "createdAt": "2022년02월14일"
+  },
+  {
+    "id": 4,
+    "userName": "testUser2",
+    "feedComment": "ㄴㄴ",
+    "picture": "images/youngjun/user.png",
+    "createdAt": "2022년01월04일"
+  },
+  {
+    "id": 5,
+    "userName": "Selp_0100 beHind",
+    "feedComment": "zzzz",
+    "picture": "images/youngjun/profile.png",
+    "createdAt": "3시간전"
+  },
+  {
+    "id": 6,
+    "userName": "나나",
+    "feedComment": "?????",
+    "picture": "images/youngjun/profile_2.png",
+    "createdAt": "10시간전"
+  },
+  {
+    "id": 7,
+    "userName": "testUser",
+    "feedComment": "what",
+    "picture": "images/youngjun/instagram.png",
+    "createdAt": "2022년02월14일"
+  },
+  {
+    "id": 8,
+    "userName": "testUser2",
+    "feedComment": "how",
+    "picture": "images/youngjun/user.png",
+    "createdAt": "2022년01월04일"
+  }
+]
